@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		5662DB0D289C275100FB328F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662DB0C289C275100FB328F /* AppDelegate.swift */; };
 		5662DB0F289C275100FB328F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662DB0E289C275100FB328F /* SceneDelegate.swift */; };
-		5662DB11289C275100FB328F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662DB10289C275100FB328F /* ViewController.swift */; };
+		5662DB11289C275100FB328F /* MovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662DB10289C275100FB328F /* MovieVC.swift */; };
 		5662DB14289C275100FB328F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5662DB12289C275100FB328F /* Main.storyboard */; };
 		5662DB16289C275500FB328F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5662DB15289C275500FB328F /* Assets.xcassets */; };
 		5662DB19289C275500FB328F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5662DB17289C275500FB328F /* LaunchScreen.storyboard */; };
+		5662DB25289C27AB00FB328F /* MovieVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662DB24289C27AB00FB328F /* MovieVM.swift */; };
+		5662DB28289C27CC00FB328F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662DB27289C27CC00FB328F /* Movie.swift */; };
+		5662DB2B289C2A6A00FB328F /* movieDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662DB2A289C2A6A00FB328F /* movieDataController.swift */; };
+		5662DB30289C395200FB328F /* movieListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5662DB2F289C395200FB328F /* movieListCell.xib */; };
+		5662DB32289C3A3000FB328F /* movieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662DB31289C3A3000FB328F /* movieListCell.swift */; };
+		5662DB35289C3C5A00FB328F /* Longinus in Frameworks */ = {isa = PBXBuildFile; productRef = 5662DB34289C3C5A00FB328F /* Longinus */; };
+		5662DB3B289C588D00FB328F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5662DB3A289C588D00FB328F /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5662DB09289C275100FB328F /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5662DB0C289C275100FB328F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5662DB0E289C275100FB328F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5662DB10289C275100FB328F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5662DB10289C275100FB328F /* MovieVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVC.swift; sourceTree = "<group>"; };
 		5662DB13289C275100FB328F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5662DB15289C275500FB328F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5662DB18289C275500FB328F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5662DB1A289C275500FB328F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5662DB24289C27AB00FB328F /* MovieVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVM.swift; sourceTree = "<group>"; };
+		5662DB27289C27CC00FB328F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		5662DB2A289C2A6A00FB328F /* movieDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieDataController.swift; sourceTree = "<group>"; };
+		5662DB2F289C395200FB328F /* movieListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = movieListCell.xib; sourceTree = "<group>"; };
+		5662DB31289C3A3000FB328F /* movieListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5662DB35289C3C5A00FB328F /* Longinus in Frameworks */,
+				5662DB3B289C588D00FB328F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +70,60 @@
 		5662DB0B289C275100FB328F /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				5662DB29289C2A5C00FB328F /* Services */,
+				5662DB23289C279800FB328F /* View */,
+				5662DB22289C279100FB328F /* ViewController */,
+				5662DB21289C278B00FB328F /* ViewModel */,
+				5662DB20289C278400FB328F /* Model */,
 				5662DB0C289C275100FB328F /* AppDelegate.swift */,
 				5662DB0E289C275100FB328F /* SceneDelegate.swift */,
-				5662DB10289C275100FB328F /* ViewController.swift */,
-				5662DB12289C275100FB328F /* Main.storyboard */,
 				5662DB15289C275500FB328F /* Assets.xcassets */,
-				5662DB17289C275500FB328F /* LaunchScreen.storyboard */,
 				5662DB1A289C275500FB328F /* Info.plist */,
 			);
 			path = MovieApp;
+			sourceTree = "<group>";
+		};
+		5662DB20289C278400FB328F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5662DB27289C27CC00FB328F /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5662DB21289C278B00FB328F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5662DB24289C27AB00FB328F /* MovieVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5662DB22289C279100FB328F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5662DB10289C275100FB328F /* MovieVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5662DB23289C279800FB328F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5662DB12289C275100FB328F /* Main.storyboard */,
+				5662DB17289C275500FB328F /* LaunchScreen.storyboard */,
+				5662DB2F289C395200FB328F /* movieListCell.xib */,
+				5662DB31289C3A3000FB328F /* movieListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5662DB29289C2A5C00FB328F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5662DB2A289C2A6A00FB328F /* movieDataController.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +142,10 @@
 			dependencies = (
 			);
 			name = MovieApp;
+			packageProductDependencies = (
+				5662DB34289C3C5A00FB328F /* Longinus */,
+				5662DB3A289C588D00FB328F /* Alamofire */,
+			);
 			productName = MovieApp;
 			productReference = 5662DB09289C275100FB328F /* MovieApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +174,10 @@
 				Base,
 			);
 			mainGroup = 5662DB00289C275100FB328F;
+			packageReferences = (
+				5662DB33289C3C5A00FB328F /* XCRemoteSwiftPackageReference "Longinus" */,
+				5662DB39289C588D00FB328F /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 5662DB0A289C275100FB328F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +195,7 @@
 				5662DB19289C275500FB328F /* LaunchScreen.storyboard in Resources */,
 				5662DB16289C275500FB328F /* Assets.xcassets in Resources */,
 				5662DB14289C275100FB328F /* Main.storyboard in Resources */,
+				5662DB30289C395200FB328F /* movieListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +206,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5662DB11289C275100FB328F /* ViewController.swift in Sources */,
+				5662DB11289C275100FB328F /* MovieVC.swift in Sources */,
 				5662DB0D289C275100FB328F /* AppDelegate.swift in Sources */,
+				5662DB2B289C2A6A00FB328F /* movieDataController.swift in Sources */,
+				5662DB32289C3A3000FB328F /* movieListCell.swift in Sources */,
+				5662DB25289C27AB00FB328F /* MovieVM.swift in Sources */,
 				5662DB0F289C275100FB328F /* SceneDelegate.swift in Sources */,
+				5662DB28289C27CC00FB328F /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +430,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5662DB33289C3C5A00FB328F /* XCRemoteSwiftPackageReference "Longinus" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/KittenYang/Longinus.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		5662DB39289C588D00FB328F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5662DB34289C3C5A00FB328F /* Longinus */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5662DB33289C3C5A00FB328F /* XCRemoteSwiftPackageReference "Longinus" */;
+			productName = Longinus;
+		};
+		5662DB3A289C588D00FB328F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5662DB39289C588D00FB328F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5662DB01289C275100FB328F /* Project object */;
 }
