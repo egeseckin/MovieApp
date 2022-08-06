@@ -8,7 +8,8 @@
 import Foundation
 
 struct movies: Decodable{
-    let Search: [movieModel]?
+    var Search: [movieModel]?
+    let totalResults: String?
 }
 
 struct movieModel: Decodable {
@@ -16,4 +17,11 @@ struct movieModel: Decodable {
     let Year: String?
     let Poster: String?
     let imdbID: String?
+}
+
+struct movieDetail: Decodable {
+    let Title: String?
+    let Genre: String?
+    let Poster: String?
+    let Plot: String?
 }

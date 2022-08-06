@@ -11,14 +11,19 @@ class movieVM {
     var dataController: movieDataControllerInterface?
     var moviesLoaded: ((movies) -> Void)?
     var searchTitle: String?
+    var pageCount = 1
+    var pageTotal: Int?
+    var totalCount = 0
+    var currentTotal = 0
     var moviesData: movies?
+    var moviesList: [movieModel]?
     
     init(){
         dataController = movieDataController()
     }
     
     func fetchMovies(){
-        dataController?.fetchMovieData(title: searchTitle, completion: { [weak self] response in
+        dataController?.fetchMovieData(title: searchTitle, pageCount: pageCount, completion: { [weak self] response in
             self?.moviesLoaded?(response)
         })
     }

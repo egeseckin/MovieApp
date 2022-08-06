@@ -30,8 +30,8 @@ class movieListCell: UITableViewCell{
     
     func configure(_ movie: movieModel) {
         lblTitle.text = movie.Title
-        lblYear.text = movie.Year
-        lblId.text = movie.imdbID
+        lblYear.text =  "Year: \(movie.Year ?? "")"
+        lblId.text = "IMDB Id: \(movie.imdbID ?? "")"
         if let posterImage = URL(string: movie.Poster ?? "") {
                    DispatchQueue.main.async {
                        self.imgMovie.lg.setImage(with: posterImage)
