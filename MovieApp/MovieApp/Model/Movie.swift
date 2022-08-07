@@ -24,4 +24,8 @@ struct movieDetail: Decodable {
     let Genre: String?
     let Poster: String?
     let Plot: String?
+    let Released: String?
+    let Runtime: String?
+    let Metascore: String?
+    let imdbRating: String?
 }

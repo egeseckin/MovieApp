@@ -22,6 +22,8 @@
 		5662DB3B289C588D00FB328F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5662DB3A289C588D00FB328F /* Alamofire */; };
 		5662DB3D289D4E2A00FB328F /* movieDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662DB3C289D4E2A00FB328F /* movieDetailVC.swift */; };
 		5662DB3F289D501700FB328F /* movieDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662DB3E289D501700FB328F /* movieDetailVM.swift */; };
+		5662DB42289FB19D00FB328F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 5662DB41289FB19D00FB328F /* Lottie */; };
+		5662DB44289FB46600FB328F /* popcorn.json in Resources */ = {isa = PBXBuildFile; fileRef = 5662DB43289FB46500FB328F /* popcorn.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,7 @@
 		5662DB31289C3A3000FB328F /* movieListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieListCell.swift; sourceTree = "<group>"; };
 		5662DB3C289D4E2A00FB328F /* movieDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieDetailVC.swift; sourceTree = "<group>"; };
 		5662DB3E289D501700FB328F /* movieDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieDetailVM.swift; sourceTree = "<group>"; };
+		5662DB43289FB46500FB328F /* popcorn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = popcorn.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +52,7 @@
 			files = (
 				5662DB35289C3C5A00FB328F /* Longinus in Frameworks */,
 				5662DB3B289C588D00FB328F /* Alamofire in Frameworks */,
+				5662DB42289FB19D00FB328F /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +85,7 @@
 				5662DB20289C278400FB328F /* Model */,
 				5662DB0C289C275100FB328F /* AppDelegate.swift */,
 				5662DB0E289C275100FB328F /* SceneDelegate.swift */,
+				5662DB43289FB46500FB328F /* popcorn.json */,
 				5662DB15289C275500FB328F /* Assets.xcassets */,
 				5662DB1A289C275500FB328F /* Info.plist */,
 			);
@@ -151,6 +156,7 @@
 			packageProductDependencies = (
 				5662DB34289C3C5A00FB328F /* Longinus */,
 				5662DB3A289C588D00FB328F /* Alamofire */,
+				5662DB41289FB19D00FB328F /* Lottie */,
 			);
 			productName = MovieApp;
 			productReference = 5662DB09289C275100FB328F /* MovieApp.app */;
@@ -183,6 +189,7 @@
 			packageReferences = (
 				5662DB33289C3C5A00FB328F /* XCRemoteSwiftPackageReference "Longinus" */,
 				5662DB39289C588D00FB328F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5662DB40289FB19D00FB328F /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 5662DB0A289C275100FB328F /* Products */;
 			projectDirPath = "";
@@ -200,6 +207,7 @@
 			files = (
 				5662DB19289C275500FB328F /* LaunchScreen.storyboard in Resources */,
 				5662DB16289C275500FB328F /* Assets.xcassets in Resources */,
+				5662DB44289FB46600FB328F /* popcorn.json in Resources */,
 				5662DB14289C275100FB328F /* Main.storyboard in Resources */,
 				5662DB30289C395200FB328F /* movieListCell.xib in Resources */,
 			);
@@ -456,6 +464,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		5662DB40289FB19D00FB328F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -468,6 +484,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5662DB39289C588D00FB328F /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		5662DB41289FB19D00FB328F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5662DB40289FB19D00FB328F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

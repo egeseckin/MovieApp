@@ -10,10 +10,11 @@ import Longinus
 
 class movieListCell: UITableViewCell{
     
-    @IBOutlet weak var imgMovie: UIImageView!
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblId: UILabel!
-    @IBOutlet weak var lblYear: UILabel!
+    @IBOutlet private weak var cellView: UIView!
+    @IBOutlet private weak var imgMovie: UIImageView!
+    @IBOutlet private weak var lblTitle: UILabel!
+    @IBOutlet private weak var lblId: UILabel!
+    @IBOutlet private weak var lblYear: UILabel!
     
     static var reuseIdentifier = "movieListCell"
     
@@ -26,6 +27,11 @@ class movieListCell: UITableViewCell{
         lblTitle.font = UIFont.boldSystemFont(ofSize: 16)
         lblYear.font = UIFont.boldSystemFont(ofSize: 14)
         lblId.font = UIFont.systemFont(ofSize: 14)
+        cellView.layer.borderColor = UIColor.systemGray4.cgColor
+        cellView.layer.borderWidth = 1.0
+        cellView.layer.cornerRadius = 6.0
+        cellView.layer.shadowOpacity = 1.0
+        cellView.layer.shadowRadius = 8.0
     }
     
     func configure(_ movie: movieModel) {
