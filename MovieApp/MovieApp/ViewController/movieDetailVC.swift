@@ -34,7 +34,6 @@ class movieDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.backButtonTitle = ""
         setupUI()
         lottieStart()
         viewModel.fetchMovieDetail()
@@ -79,7 +78,6 @@ class movieDetailVC: UIViewController {
         lblDetail.attributedText = stringAttribute(boldString: "Plot: ", normalString: data?.Plot ?? "Unknown")
         let backBarButtonItem = UIBarButtonItem(title: data?.Title, style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backBarButtonItem
-        
     }
 }
 
@@ -97,15 +95,15 @@ extension movieDetailVC {
     }
     
     func stringAttribute(boldString: String?, normalString: String?) -> NSMutableAttributedString?{
-
+        
         let firstAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.boldSystemFont(ofSize: 16), .foregroundColor: UIColor.black]
         let secondAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)]
-
+        
         let firstString = NSMutableAttributedString(string: boldString ?? "", attributes: firstAttributes)
         let secondString = NSAttributedString(string: normalString ?? "", attributes: secondAttributes)
-
+        
         firstString.append(secondString)
         return firstString
     }
-
+    
 }

@@ -9,7 +9,7 @@ import UIKit
 import Lottie
 
 class MovieVC: UIViewController {
-
+    
     @IBOutlet private weak var searchTextField: UITextField!
     @IBOutlet private weak var searchButton: UIButton!
     @IBOutlet private weak var tableView: UITableView!
@@ -46,8 +46,7 @@ class MovieVC: UIViewController {
                 }else{
                     self?.noResultView.isHidden = true
                 }
-                self?.viewModel.totalCount = Int(data.totalResults ?? "0")  ?? 0
-                self?.viewModel.pageTotal = (self?.viewModel.totalCount ?? 0) / 10  // 10 Movies on each page
+                self?.viewModel.pageTotal = (Int(data.totalResults ?? "0") ?? 0) / 10  // 10 Movies on each page
                 self?.lottieStop()
                 self?.tableView.reloadData()
             }
@@ -66,7 +65,7 @@ class MovieVC: UIViewController {
 
 
 extension MovieVC: UITableViewDelegate{
-
+    
 }
 extension MovieVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,7 +96,7 @@ extension MovieVC: UITableViewDataSource {
         let backItem = UIBarButtonItem()
         backItem.title = self.viewModel.moviesList?[indexPath.row].Title
         backItem.tintColor = .white
-           navigationItem.backBarButtonItem = backItem
+        navigationItem.backBarButtonItem = backItem
         vc.viewModel.movieId = self.viewModel.moviesList?[indexPath.row].imdbID
         self.navigationController?.pushViewController(vc, animated: true)
     }

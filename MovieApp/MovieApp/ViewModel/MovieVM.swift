@@ -13,8 +13,6 @@ class movieVM {
     var searchTitle: String?
     var pageCount = 1
     var pageTotal: Int?
-    var totalCount = 0
-    var currentTotal = 0
     var moviesData: movies?
     var moviesList: [movieModel]?
     
